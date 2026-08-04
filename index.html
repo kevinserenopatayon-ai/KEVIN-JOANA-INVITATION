@@ -6,7 +6,7 @@
 
 <title>Kevin & Joana | Wedding Invitation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -22,7 +22,7 @@ html{
 
 body{
     background:#f8f4ef;
-    font-family:'Cormorant Garamond', serif;
+    font-family:'Cormorant Garamond',serif;
     overflow-x:hidden;
 }
 
@@ -35,46 +35,40 @@ body{
     align-items:center;
     text-align:center;
     padding:20px;
-    background:linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.55));
-}
-
-.hero-content{
-    animation:fadeUp 1.8s ease;
 }
 
 .hero h3{
-    font-size:22px;
-    letter-spacing:4px;
     color:#96744b;
+    letter-spacing:4px;
+    font-size:18px;
 }
 
 .hero h1{
-    font-family:'Great Vibes', cursive;
-    font-size:95px;
-    font-weight:100;
+    font-family:'Great Vibes',cursive;
+    font-size:90px;
     color:#b48442;
     margin:20px 0;
 }
 
 .hero h2{
-    font-size:45px;
-    letter-spacing:4px;
+    font-size:40px;
     color:#4a4038;
+    letter-spacing:3px;
 }
 
 .hero p{
     margin-top:20px;
-    font-size:24px;
-    color:#555;
+    font-size:22px;
+    color:#666;
 }
 
 .scroll{
-    margin-top:60px;
-    font-size:18px;
+    margin-top:50px;
     animation:float 2s infinite;
+    color:#96744b;
 }
 
-/* PAGES */
+/* IMAGE SECTION */
 
 .page{
     min-height:100vh;
@@ -97,7 +91,7 @@ body{
     width:100%;
     max-width:900px;
     border-radius:20px;
-    box-shadow:0 20px 60px rgba(0,0,0,.15);
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
     display:block;
 }
 
@@ -109,33 +103,22 @@ body{
 }
 
 .footer h2{
-    font-family:'Great Vibes', cursive;
+    font-family:'Great Vibes',cursive;
     font-size:55px;
     color:#b48442;
 }
 
 .footer p{
     margin-top:15px;
-    font-size:24px;
-    color:#555;
+    font-size:22px;
+    color:#666;
 }
 
-/* ANIMATIONS */
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
+/* ANIMATION */
 
 @keyframes float{
     0%{transform:translateY(0);}
-    50%{transform:translateY(12px);}
+    50%{transform:translateY(10px);}
     100%{transform:translateY(0);}
 }
 
@@ -152,7 +135,7 @@ body{
 }
 
 .hero h3{
-    font-size:16px;
+    font-size:15px;
 }
 
 .hero p{
@@ -160,11 +143,7 @@ body{
 }
 
 .footer h2{
-    font-size:42px;
-}
-
-.footer p{
-    font-size:18px;
+    font-size:40px;
 }
 
 }
@@ -175,77 +154,65 @@ body{
 
 <body>
 
-<!-- HERO -->
-
 <section class="hero">
 
-    <div class="hero-content">
+<div>
 
-        <h3>WE ARE HONORED TO INVITE YOU TO WITNESS</h3>
+<h3>WE ARE HONORED TO INVITE YOU TO WITNESS</h3>
 
-        <h1>Kevin & Joana</h1>
+<h1>Kevin & Joana</h1>
 
-        <h2>Wedding Fellowship</h2>
+<h2>Wedding Fellowship</h2>
 
-        <p>October 22, 2026 • 4:30 PM</p>
+<p>October 22, 2026 • 4:30 PM</p>
 
-        <div class="scroll">
-            ▼ Scroll Down ▼
-        </div>
+<div class="scroll">
+▼ Scroll Down ▼
+</div>
 
-    </div>
+</div>
 
 </section>
-
-<!-- INVITATION -->
 
 <section class="page">
-    <img src="images/invitation.png" alt="Invitation">
+<img src="images/invitation.png" alt="Invitation">
 </section>
-
-<!-- ATTIRE -->
 
 <section class="page">
-    <img src="images/ware.png" alt="Ware">
+<img src="images/ware.png" alt="Attire">
 </section>
-
-<!-- LOCATION -->
 
 <section class="page">
-    <img src="images/venue.png" alt="Venue">
+<img src="images/venue.png" alt="Venue">
 </section>
-
-<!-- FOOTER -->
 
 <section class="footer">
 
-    <h2>We Can't Wait to Celebrate With You!</h2>
+<h2>We Can't Wait to Celebrate With You!</h2>
 
-    <p>See you on October 22, 2026</p>
+<p>See you on October 22, 2026</p>
 
 </section>
 
 <script>
 
-const pages = document.querySelectorAll(".page");
-
 const observer = new IntersectionObserver((entries)=>{
 
-    entries.forEach(entry=>{
+entries.forEach(entry=>{
 
-        if(entry.isIntersecting){
+if(entry.isIntersecting){
 
-            entry.target.classList.add("show");
+entry.target.classList.add("show");
 
-        }
+}
 
-    });
-
-},{
-    threshold:0.2
 });
 
-pages.forEach(page=>observer.observe(page));
+},{
+threshold:0.2
+});
+
+document.querySelectorAll(".page").forEach(page=>observer.observe(page));
 
 </script>
 
