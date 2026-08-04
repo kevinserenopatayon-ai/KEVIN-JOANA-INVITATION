@@ -11,161 +11,161 @@
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-
-background:#f8f4ef;
-font-family:'Cormorant Garamond',serif;
-overflow-x:hidden;
-
+    background:#f8f4ef;
+    font-family:'Cormorant Garamond', serif;
+    overflow-x:hidden;
 }
 
+/* HERO */
+
 .hero{
-
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5));
-
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.55));
 }
 
 .hero-content{
-
-animation:fadeUp 2s ease;
-
+    animation:fadeUp 1.8s ease;
 }
 
 .hero h3{
-
-letter-spacing:4px;
-font-size:22px;
-color:#96744b;
-
+    font-size:22px;
+    letter-spacing:4px;
+    color:#96744b;
 }
 
 .hero h1{
-
-font-family:'Great Vibes',cursive;
-font-size:95px;
-font-weight:100;
-color:#b48442;
-margin:20px 0;
-
+    font-family:'Great Vibes', cursive;
+    font-size:95px;
+    font-weight:100;
+    color:#b48442;
+    margin:20px 0;
 }
 
 .hero h2{
-
-font-size:45px;
-letter-spacing:5px;
-color:#4a4038;
-
+    font-size:45px;
+    letter-spacing:4px;
+    color:#4a4038;
 }
 
 .hero p{
-
-margin-top:25px;
-font-size:24px;
-color:#555;
-
+    margin-top:20px;
+    font-size:24px;
+    color:#555;
 }
 
 .scroll{
-
-margin-top:70px;
-font-size:18px;
-animation:float 2s infinite;
-
+    margin-top:60px;
+    font-size:18px;
+    animation:float 2s infinite;
 }
+
+/* PAGES */
 
 .page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 20px;
 
-padding:80px 0;
-display:flex;
-justify-content:center;
-
+    opacity:0;
+    transform:translateY(80px);
+    transition:1s ease;
 }
 
-.card{
-
-width:900px;
-max-width:90%;
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 20px 50px rgba(0,0,0,.1);
-
-opacity:0;
-transform:translateY(80px);
-
-transition:1s;
-
+.page.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
-.card.show{
-
-opacity:1;
-transform:translateY(0);
-
+.page img{
+    width:100%;
+    max-width:900px;
+    border-radius:20px;
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+    display:block;
 }
 
-.card img{
-
-width:100%;
-border-radius:15px;
-
-}
+/* FOOTER */
 
 .footer{
-
-text-align:center;
-padding:80px;
-
+    padding:80px 20px;
+    text-align:center;
 }
 
 .footer h2{
-
-font-family:'Great Vibes',cursive;
-font-size:55px;
-color:#b48442;
-
+    font-family:'Great Vibes', cursive;
+    font-size:55px;
+    color:#b48442;
 }
 
 .footer p{
-
-margin-top:20px;
-font-size:22px;
-
+    margin-top:15px;
+    font-size:24px;
+    color:#555;
 }
+
+/* ANIMATIONS */
 
 @keyframes fadeUp{
-
-from{
-
-opacity:0;
-transform:translateY(50px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 @keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(12px);}
+    100%{transform:translateY(0);}
+}
 
-0%{transform:translateY(0);}
-50%{transform:translateY(12px);}
-100%{transform:translateY(0);}
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero h2{
+    font-size:28px;
+}
+
+.hero h3{
+    font-size:16px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.footer h2{
+    font-size:42px;
+}
+
+.footer p{
+    font-size:18px;
+}
 
 }
 
@@ -175,79 +175,77 @@ transform:translateY(0);
 
 <body>
 
+<!-- HERO -->
+
 <section class="hero">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<h3>WE ARE HONORED TO INVITE YOU TO WITNESS</h3>
+        <h3>WE ARE HONORED TO INVITE YOU TO WITNESS</h3>
 
-<h1>Kevin & Joana</h1>
+        <h1>Kevin & Joana</h1>
 
-<h2>Wedding Fellowship</h2>
+        <h2>Wedding Fellowship</h2>
 
-<p>October 22, 2026 • 4:30 PM</p>
+        <p>October 22, 2026 • 4:30 PM</p>
 
-<div class="scroll">
+        <div class="scroll">
+            ▼ Scroll Down ▼
+        </div>
 
-▼ Scroll Down ▼
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<section class="page">
-
-<div class="card reveal">
+<!-- INVITATION -->
 
 <section class="page">
     <img src="images/invitation.png" alt="Invitation">
 </section>
 
+<!-- ATTIRE -->
+
 <section class="page">
     <img src="images/attire.png" alt="Attire">
 </section>
+
+<!-- LOCATION -->
 
 <section class="page">
     <img src="images/location.png" alt="Location">
 </section>
 
-</div>
-
-</section>
+<!-- FOOTER -->
 
 <section class="footer">
 
-<h2>We Can't Wait to Celebrate With You!</h2>
+    <h2>We Can't Wait to Celebrate With You!</h2>
 
-<p>See you on October 22, 2026</p>
+    <p>See you on October 22, 2026</p>
 
 </section>
 
 <script>
 
-const reveals=document.querySelectorAll(".reveal");
+const pages = document.querySelectorAll(".page");
 
-window.addEventListener("scroll",()=>{
+const observer = new IntersectionObserver((entries)=>{
 
-for(let i=0;i<reveals.length;i++){
+    entries.forEach(entry=>{
 
-const windowHeight=window.innerHeight;
+        if(entry.isIntersecting){
 
-const top=reveals[i].getBoundingClientRect().top;
+            entry.target.classList.add("show");
 
-const visible=150;
+        }
 
-if(top<windowHeight-visible){
+    });
 
-reveals[i].classList.add("show");
-
-}
-
-}
-
+},{
+    threshold:0.2
 });
+
+pages.forEach(page=>observer.observe(page));
 
 </script>
 
