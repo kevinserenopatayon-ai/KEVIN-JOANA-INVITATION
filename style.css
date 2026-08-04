@@ -1,14 +1,31 @@
+body{
+    margin:0;
+    background:#f8f4ef;
+    scroll-behavior:smooth;
+}
+
 .page{
-    padding:80px 0;
+    min-height:100vh;
     display:flex;
     justify-content:center;
+    align-items:center;
+    padding:50px 20px;
 
+    /* Animation */
     opacity:0;
     transform:translateY(80px);
-    transition:1s;
+    transition:opacity 1s ease, transform 1s ease;
 }
 
 .page.show{
     opacity:1;
     transform:translateY(0);
+}
+
+.page img{
+    width:100%;
+    max-width:800px;
+    border-radius:20px;
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+    display:block;
 }
