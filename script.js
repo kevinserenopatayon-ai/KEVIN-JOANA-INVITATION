@@ -1,15 +1,13 @@
-const pages = document.querySelectorAll(".page");
-
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
         if(entry.isIntersecting){
             entry.target.classList.add("show");
         }
     });
 },{
-    threshold:0.2
+    threshold:0.15
 });
 
-pages.forEach(page=>{
-    observer.observe(page);
+document.querySelectorAll(".reveal").forEach(el=>{
+    observer.observe(el);
 });
