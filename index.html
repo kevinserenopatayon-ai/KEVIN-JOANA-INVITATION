@@ -6,200 +6,143 @@
 
 <title>Kevin & Joana | Wedding Invitation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#f8f6f2;
-font-family:'Cormorant Garamond',serif;
-color:#4d453d;
-overflow-x:hidden;
+    background:#f8f4ef;
+    font-family:'Cormorant Garamond',serif;
+    overflow-x:hidden;
 }
 
-/* Hero */
+/* HERO */
 
 .hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-url("images/hero.jpg") center/cover;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero-content{
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(10px);
-padding:50px;
-border:1px solid rgba(255,255,255,.4);
-border-radius:25px;
-max-width:700px;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
 }
 
 .hero h3{
-letter-spacing:5px;
-color:#f7e6be;
-font-size:18px;
-margin-bottom:15px;
+    color:#96744b;
+    letter-spacing:4px;
+    font-size:18px;
 }
 
 .hero h1{
-font-family:'Great Vibes',cursive;
-font-size:90px;
-color:white;
-margin-bottom:10px;
+    font-family:'Great Vibes',cursive;
+    font-size:90px;
+    color:#b48442;
+    margin:20px 0;
 }
 
 .hero h2{
-font-size:34px;
-color:#fff;
-font-weight:400;
-margin-bottom:20px;
+    font-size:40px;
+    color:#4a4038;
+    letter-spacing:3px;
 }
 
 .hero p{
-font-size:22px;
-color:#f1f1f1;
+    margin-top:20px;
+    font-size:22px;
+    color:#666;
 }
 
-.button{
-display:inline-block;
-margin-top:35px;
-padding:15px 40px;
-border:1px solid #d4af37;
-color:white;
-text-decoration:none;
-transition:.4s;
+.scroll{
+    margin-top:50px;
+    animation:float 2s infinite;
+    color:#96744b;
 }
 
-.button:hover{
-background:#d4af37;
-color:#222;
+/* IMAGE SECTION */
+
+.page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 20px;
+    opacity:0;
+    transform:translateY(80px);
+    transition:opacity 1s ease, transform 1s ease;
 }
 
-/* Section */
-
-.section{
-padding:100px 20px;
-text-align:center;
+.page.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
-.section-title{
-font-family:'Great Vibes',cursive;
-font-size:60px;
-color:#b38a44;
-margin-bottom:15px;
+.page img{
+    width:100%;
+    max-width:900px;
+    display:block;
+    border-radius:20px;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
 }
 
-.section p{
-font-size:22px;
-margin-bottom:40px;
+/* FOOTER */
+
+.footer{
+    padding:80px 20px;
+    text-align:center;
 }
 
-/* Images */
-
-.card{
-max-width:950px;
-margin:auto;
-background:white;
-padding:20px;
-border-radius:20px;
-box-shadow:0 20px 50px rgba(0,0,0,.12);
-
-opacity:0;
-transform:translateY(70px);
-transition:1s;
+.footer h2{
+    font-family:'Great Vibes',cursive;
+    font-size:55px;
+    color:#b48442;
 }
 
-.card.show{
-opacity:1;
-transform:translateY(0);
+.footer p{
+    margin-top:15px;
+    font-size:22px;
+    color:#666;
 }
 
-.card img{
-width:100%;
-display:block;
-border-radius:15px;
+/* ANIMATION */
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(10px);}
+    100%{transform:translateY(0);}
 }
 
-/* Footer */
+/* MOBILE */
 
-footer{
-padding:80px 20px;
-background:#222;
-text-align:center;
-color:white;
-}
-
-footer h2{
-font-family:'Great Vibes',cursive;
-font-size:55px;
-margin-bottom:15px;
-}
-
-footer p{
-font-size:20px;
-color:#ddd;
-}
-
-/* Floating Button */
-
-.top{
-position:fixed;
-right:20px;
-bottom:20px;
-width:55px;
-height:55px;
-border-radius:50%;
-background:#b38a44;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:22px;
-text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
-}
-
-/* Mobile */
-
-@media(max-width:768px){
+@media (max-width:768px){
 
 .hero h1{
-font-size:60px;
+    font-size:60px;
 }
 
 .hero h2{
-font-size:24px;
+    font-size:28px;
+}
+
+.hero h3{
+    font-size:15px;
 }
 
 .hero p{
-font-size:18px;
+    font-size:18px;
 }
 
-.hero-content{
-padding:35px 20px;
-}
-
-.section-title{
-font-size:42px;
-}
-
-.section p{
-font-size:18px;
+.footer h2{
+    font-size:40px;
 }
 
 }
@@ -212,99 +155,67 @@ font-size:18px;
 
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
-<h3>WE ARE HONORED TO INVITE YOU</h3>
+<h3>WE ARE HONORED TO INVITE YOU TO WITNESS</h3>
 
-<h1>Kevin & Joana</h1>
+<h1>Kevin &amp; Joana</h1>
 
 <h2>Wedding Fellowship</h2>
 
 <p>October 22, 2026 • 4:30 PM</p>
 
-<a href="#invitation" class="button">
-View Invitation
-</a>
+<div class="scroll" aria-hidden="true">
+▼ Scroll Down ▼
+</div>
 
 </div>
 
 </section>
 
-<section class="section" id="invitation">
-
-<h2 class="section-title">Wedding Invitation</h2>
-
-<p>With joyful hearts, we invite you to celebrate our special day.</p>
-
-<div class="card">
-<img src="images/invitation.png">
-</div>
-
+<section class="page">
+    <img src="images/invitation.png" alt="Wedding Invitation" loading="eager">
 </section>
 
-<section class="section">
-
-<h2 class="section-title">Dress Code</h2>
-
-<p>Your presence is the greatest gift. Please join us in elegant attire.</p>
-
-<div class="card">
-<img src="images/ware.png">
-</div>
-
+<section class="page">
+    <img src="images/ware.png" alt="Wedding Attire" loading="lazy">
 </section>
 
-<section class="section">
-
-<h2 class="section-title">RSVP</h2>
-
-<p>Please confirm your attendance on or before September 30.</p>
-
-<div class="card">
-<img src="images/RSVP.png">
-</div>
-
+<section class="page">
+    <img src="images/RSVP.png" alt="RSVP Information" loading="lazy">
 </section>
 
-<section class="section">
-
-<h2 class="section-title">Venue</h2>
-
-<p>We look forward to celebrating this unforgettable day with you.</p>
-
-<div class="card">
-<img src="images/venue.png">
-</div>
-
+<section class="page">
+    <img src="images/venue.png" alt="Wedding Venue" loading="lazy">
 </section>
 
-<footer>
+<section class="footer">
 
-<h2>See You On Our Wedding Day</h2>
+<h2>We Can't Wait to Celebrate With You!</h2>
 
-<p>October 22, 2026</p>
+<p>See you on October 22, 2026</p>
 
-</footer>
-
-<a href="#" class="top">↑</a>
+</section>
 
 <script>
 
-const observer=new IntersectionObserver(entries=>{
+const observer = new IntersectionObserver((entries) => {
 
-entries.forEach(entry=>{
+    entries.forEach((entry) => {
 
-if(entry.isIntersecting){
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
 
-entry.target.classList.add("show");
+    });
 
-}
-
+}, {
+    threshold: 0.2
 });
 
-},{threshold:.2});
-
-document.querySelectorAll(".card").forEach(card=>observer.observe(card));
+document.querySelectorAll(".page").forEach((page) => {
+    observer.observe(page);
+});
 
 </script>
 
