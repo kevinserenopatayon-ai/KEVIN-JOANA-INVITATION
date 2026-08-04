@@ -1,0 +1,20 @@
+body{
+    margin:0;
+    background:#f8f4ef;
+    scroll-behavior:smooth;
+}
+
+.page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 20px;
+}
+
+.page img{
+    width:100%;
+    max-width:800px;
+    border-radius:20px;
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+}
