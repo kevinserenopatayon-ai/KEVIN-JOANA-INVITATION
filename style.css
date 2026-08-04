@@ -1,24 +1,14 @@
-body{
-    margin:0;
-    background:#f8f4ef;
-    scroll-behavior:smooth;
-}
-
 .page{
-    min-height:100vh;
+    padding:80px 0;
     display:flex;
     justify-content:center;
-    align-items:center;
-    padding:50px 20px;
+
+    opacity:0;
+    transform:translateY(80px);
+    transition:1s;
 }
 
-.page img{
-    width:100%;
-    max-width:800px;
-    border-radius:20px;
-    box-shadow:0 20px 60px rgba(0,0,0,.15);
-}
-
-html{
-    scroll-behavior:smooth;
+.page.show{
+    opacity:1;
+    transform:translateY(0);
 }
